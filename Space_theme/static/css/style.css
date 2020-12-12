@@ -1,0 +1,427 @@
+body {
+  color: #818181;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000000;
+}
+p {
+  font-size:25px;
+  margin: 120px 50px 50px 100px;
+}
+h1 {
+  text-shadow: 10px 10px 10px rgba(123, 104, 238, 1.0);
+  z-index: 10;
+  opacity: 35%;
+  color: #a658b4;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 100%;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  perspective: 400px;
+
+}
+h2 {
+  text-shadow: 10px 10px 10px rgba(123, 104, 238, 1.0);
+  font-size: 50px;
+  text-align: center;
+  color: #a658b4;
+}
+.img-container {
+  text-align: center;
+}
+div.wrapper {
+  opacity: 30%;
+  z-index:17;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+div.quarter {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #666699;
+  transition: transform .5s,
+  opacity: 2%;
+}
+div.quarter.left-top {
+  background-image: url("https://visualpharm.com/assets/455/Person%20Female-595b40b75ba036ed117da137.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  left: 0;
+  top: 0;
+  border-top-left-radius: 50px;
+}
+div.quarter.right-top {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRNLa2MXtUDbq8ZQpQeWV5R5LYq1M0jMN6tiQ&usqp=CAU");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  left: 50px;
+  top: 0;
+  border-top-right-radius: 50px;
+}
+div.quarter.left-bottom {
+  background-image: url("/static/book.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  left: 0;
+  top: 50px;
+  border-bottom-left-radius: 50px;
+}
+div.quarter.right-bottom {
+  background-image: url("/static/phone.png");
+  background-repeat: no-repeat;
+  background-position: top-left;
+  background-size: 60%;
+  left: 50px;
+  top: 50px;
+  border-bottom-right-radius: 50px;
+}
+div.wrapper:hover div.quarter {
+  opacity: .5;
+}
+div.quarter:hover {
+  opacity: 1 !important;
+  transform: scale(1.2)
+}
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+sidebar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.sidebar_2::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+sidebar_2 {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.sidebar_3::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+sidebar_3 {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.sidebar_4::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+sidebar_4 {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.sidebar {
+  overflow-y: scroll; /* Add the ability to scroll */
+  height: 72%;
+  width: 0;
+  position: absolute;
+  z-index: 25;
+  top: 5%;
+  left: 10%;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 1.0s;
+  padding-top: 60px;
+}
+.sidebar a {
+  z-index:25;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 1.5s;
+}
+.sidebar .closebtn {
+  z-index:25;
+  position: absolute;
+  top: 5%;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.sidebar_2 {
+  overflow-y: scroll; /* Add the ability to scroll */
+  height: 72%;
+  width: 0;
+  position: absolute;
+  z-index: 25;
+  top: 5%;
+  left: 10%;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 1s;
+  padding-top: 60px;
+}
+.sidebar_2 a {
+  z-index:25;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 1s;
+}
+.sidebar_2 .closebtn_2 {
+  z-index:25;
+  position: absolute;
+  top: 5%;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.sidebar_3 {
+  overflow-y: scroll; /* Add the ability to scroll */
+  height: 72%;
+  width: 0;
+  position: absolute;
+  z-index: 25;
+  top: 5%;
+  left: 10%;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 1s;
+  padding-top: 60px;
+}
+.sidebar_3 a {
+  z-index:25;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 1s;
+}
+.sidebar_3 .closebtn_3 {
+  z-index:25;
+  position: absolute;
+  top: 5%;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.sidebar_4 {
+  overflow-y: scroll; /* Add the ability to scroll */
+  height: 72%;
+  width: 0;
+  position: absolute;
+  z-index: 25;
+  top: 5%;
+  left: 10%;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 1s;
+  padding-top: 60px;
+}
+.sidebar_4 a {
+  z-index:25;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 1s;
+}
+.sidebar_4 .closebtn_4 {
+  z-index:25;
+  position: absolute;
+  top: 5%;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+}
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+.stars, .twinkling {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index:0;
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.fade {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  top: -25px;
+  background-image: linear-gradient(0deg, transparent, black 99%);
+  z-index: 10;
+}
+.crawl {
+  position: relative;
+  top: -100px;
+  transform-origin: 50% 100%;
+  animation: crawl 9s ease-in;
+}
+
+@keyframes crawl {
+  0% {
+    top: 0;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+  100% {
+    top: -2500px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
+
+.border_right {
+  opacity: 60%;
+  height:79%;
+  right: 9%; bottom:2%; top:5%;
+  width: 1%;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  position: fixed;
+}
+.border_left {
+  opacity: 60%;
+  height:79%;
+  bottom: 2%; left: 9%; top: 5%;
+  width: 1%;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  position: fixed;
+}
+.diamond_base {
+  position: absolute;
+  background-color: #cc00ff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  -webkit-animation-name: animation_bg_element4;
+  animation-name: animation_bg_element4;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.orb {
+  background: radial-gradient(circle at bottom, #f8f8ff, #76deef 10%, #f8f8ff 80%, #f8f8ff 100%);
+  opacity: 65%;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px #ff0000,
+    inset -20px 0 80px #0043ff,
+    inset 20px 0 300px #9100ff,
+    inset -20px 0 300px #ff006a,
+    0 0 50px #fff,
+    -10px 0 80px #0089ff,
+    10px 0 80px #d800ff;
+  height: 400px; width: 400px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  border-radius: 50%;
+  -webkit-animation-name: circle;
+  animation-name: circle;
+  z-index:10;
+}
+
+
+@-webkit-keyframes animation_bg_element4 {
+  0% {
+    background-color: #cc00ff;
+  }
+  20% {
+    background-color: #ff33cc;
+  }
+  40% {
+    background-color: #33ccff;
+  }
+  60% {
+    background-color: #ffccff;
+  }
+  80% {
+    background-color: #ff66ff;
+}
+@keyframes animation_bg_element4 {
+  0% {
+    background-color: #cc00ff;
+  }
+  20% {
+    background-color: #ff33cc;
+  }
+  40% {
+    background-color: #33ccff;
+  }
+  60% {
+    background-color: #ffccff;
+  }
+  80% {
+    background-color: #ff66ff;
+  }
+}
+
+
+
