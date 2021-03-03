@@ -48,7 +48,7 @@ def parse_listing(keyword, place):
                 XPATH_LISTINGS = "//div[@class='search-results organic']//div[@class='v-card']"
                 listings = parser.xpath(XPATH_LISTINGS)
                 scraped_results = []
-                count = 0
+
                 for results in listings:
                     XPATH_BUSINESS_NAME = ".//a[@class='business-name']//text()"
                     # XPATH_BUSSINESS_PAGE = ".//a[@class='business-name']//@href"
@@ -129,15 +129,28 @@ if __name__ == "__main__":
     keyword = args.keyword
     place = args.place
 
+    unwanted = ['Penske', 'Budget', 'U-Haul', 'Hertz']
     scraped_data = parse_listing(keyword, place)
+    count = 0
+    for row in scraped_data:
+        count = count + 1
+        print(count)
+        for substring in unwanted:
+            fullstring = row['business_name'].encode().upper()
+            # print(f'{substring} = {fullstring}')
+            if substring in row['business_name']:
+                print(substring)
+                print(row['business_name'])
+                del scraped_data[count-1]
+            else:
+                print('good')
 
     if scraped_data:
-        print("Writing scraped data to %s-%s-yellowpages-scraped-data.csv" % (keyword, place))
-        with open('%s-%s-yellowpages-scraped-data.csv' % (keyword, place), 'wb') as csvfile:
+        print("Writing scraped data to %s-%s-yellowpages-scraped-data-first.csv" % (keyword, place))
+        with open('test-data.csv', 'ab') as csvfile:
             fieldnames = ['rank', 'business_name', 'telephone', 'category', 'rating',
                           'street', 'locality', 'region', 'zipcode']
             # fieldnames taken out : ['business_page', 'website', 'listing_url']
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_ALL)
-            writer.writeheader()
             for data in scraped_data:
                 writer.writerow(data)
