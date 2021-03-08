@@ -51,7 +51,7 @@ def parse_listing(keyword, place):
 
                 for results in listings:
                     XPATH_BUSINESS_NAME = ".//a[@class='business-name']//text()"
-                    # XPATH_BUSSINESS_PAGE = ".//a[@class='business-name']//@href"
+                    
                     XPATH_TELEPHONE = ".//div[@class='phones phone primary']//text()"
                     XPATH_ADDRESS = ".//div[@class='info']//div//p[@itemprop='address']"
                     XPATH_STREET = ".//div[@class='street-address']//text()"
@@ -60,16 +60,16 @@ def parse_listing(keyword, place):
                     XPATH_ZIP_CODE = ".//div[@class='info']//div//p[@itemprop='address']//span[@itemprop='postalCode']//text()"
                     XPATH_RANK = ".//div[@class='info']//h2[@class='n']/text()"
                     XPATH_CATEGORIES = ".//div[@class='info']//div[contains(@class,'info-section')]//div[@class='categories']//text()"
-                    # XPATH_WEBSITE = ".//div[@class='info']//div[contains(@class,'info-section')]//div[@class='links']//a[contains(@class,'website')]/@href"
+                    
                     XPATH_RATING = ".//div[@class='info']//div[contains(@class,'info-section')]//div[contains(@class,'result-rating')]//span//text()"
 
                     raw_business_name = results.xpath(XPATH_BUSINESS_NAME)
                     raw_business_telephone = results.xpath(XPATH_TELEPHONE)
-                    # raw_business_page = results.xpath(XPATH_BUSSINESS_PAGE)
+                    
                     raw_categories = results.xpath(XPATH_CATEGORIES)
-                    # raw_website = results.xpath(XPATH_WEBSITE)
+                  
                     raw_rating = results.xpath(XPATH_RATING)
-                    # address = results.xpath(XPATH_ADDRESS)
+                   
                     raw_street = results.xpath(XPATH_STREET)
                     raw_locality = results.xpath(XPATH_LOCALITY)
                     raw_region = results.xpath(XPATH_REGION)
@@ -78,10 +78,9 @@ def parse_listing(keyword, place):
 
                     business_name = ''.join(raw_business_name).strip() if raw_business_name else None
                     telephone = ''.join(raw_business_telephone).strip() if raw_business_telephone else None
-                    # business_page = ''.join(raw_business_page).strip() if raw_business_page else None
+
                     rank = ''.join(raw_rank).replace('.\xa0', '') if raw_rank else None
                     category = ','.join(raw_categories).strip() if raw_categories else None
-                    # website = ''.join(raw_website).strip() if raw_website else None
                     rating = ''.join(raw_rating).replace("(", "").replace(")", "").strip() if raw_rating else None
                     street = ''.join(raw_street).strip() if raw_street else None
                     locality = ''.join(raw_locality).replace(',\xa0', '').strip() if raw_locality else None
