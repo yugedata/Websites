@@ -79,14 +79,3 @@ while True:
 
     driver.quit()
 
-# button = driver.find_element_by_id('buttonID') # Or find button by ID.
-'''
-count = 0
-print(elem)
-for x in range(len(elem)):
-    print(count)
-    print(elem[x].text)
-    count = count + 1
-driver.close()
-print(count)
-'''
